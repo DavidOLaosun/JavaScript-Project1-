@@ -1,0 +1,170 @@
+/** 
+ * Treehouse FSJS Techdegree
+ * Random Quote Generator - CSS
+ */
+
+body {
+    background-color: rgb(29,15,222);
+    color: blue;
+    font-family: 'Playfair Display', serif;
+    padding: 5px;
+}
+
+header{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 95%;
+    max-width:1050px;
+    margin: auto;
+    padding: 5px;
+}
+
+h1 {
+    text-shadow: 1px 1px 1px rgba(25,25,25,0.2);
+}
+
+.load-quote {
+    color:#ff0000;
+    text-shadow: 1px 1px 1px rgba(25,25,25,0.2);
+    width: 16em;
+    max-height: 75px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 20px 0;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 5px;
+    border: 2px solid rgba(0,0,0,0.2);
+    transitiion: 0.5s;
+}
+
+.load-quote:hover{
+    background-color: rgba(255,255,255,0.2);
+    animation: buttonShine 2.5s infinite; 
+}
+
+@keyframes buttonShine{
+    0%{filter:brightness(1)}
+    25%{filter:brightness(2)}
+    85%{filter:brightness(2)}
+    100%{filter:brightness(1)}
+}
+
+.load-quote:focus{
+    outline:none;
+}
+
+.container{
+    width:90%;
+    max-width:1000px;
+    margin: auto;
+    padding:10px;
+}
+
+.quote-box {
+    text-shadow: 1px 1px 1px rgba(50,50,50,0.4)
+    line-height: 0.5;
+}
+
+.quote{
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.2;
+    postion: relative;
+    margin: 0;
+    margin-left: 10px; 
+}
+
+.quote:before,
+.quote:after {
+    font-size: 4rem;
+    line-height: 3.0rem;
+    postion: absolute;
+}
+
+.quote:before {
+    top: 0.1em;
+    left: -0.5em;
+}
+
+.quote:after {
+    bottom: -0.1em;
+    margin-left:0.1em;
+    postion:absolute;
+}
+
+.source {
+    font-size: 6rem;
+    letter-spacing: 0.5em;
+    line-height: 1.1;
+    text-align: right;
+    margin-right: 8em;
+}
+
+.source:before {
+    content: ",";
+}
+
+.citation: {
+    font-style: italic;
+}
+
+.citation:before {
+    content: ",";
+    font-size: normal;
+}
+
+.year:before {
+    content: ",";
+    font-size: normal;
+}
+
+@media (min-width:1000px) {
+    body {
+        padding: 25px;
+}
+
+header {
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    height: 75px;
+    margin-top: 20px;
+    margin-right: 8px;
+    border-bottom: 4px solid rgba(0,0,0,0.3);
+}
+
+.load-quote {
+    font-size:1.5rem;
+}
+
+.container {
+    padding: 25px 25px 20px 50px;
+    background: rgba(0,0,0,0.1);
+    border-left: 5px solid rgba(0,0,0,0.3);
+    border-radius: 0 4px 4px 0;
+}
+
+.quote {
+    font-size:4rem;
+}
+
+.quote:before,
+.quote:after {
+    font-size: 8rem;
+}
+
+.quote:before {
+    top: 0.25em;
+}
+
+.quote:after {
+bottom:0.1em;
+}
+
+.source {
+    font-size: 1.25rem;
+    }
+}
