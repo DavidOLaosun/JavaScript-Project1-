@@ -21,24 +21,29 @@ var quotes = [
         'quote':'You lead me and keep me from falling.You carry ,e close to Your heart.And surely Your goodness and mercy will follow me.',
         'source':'Chris Tomlin',
         'citation':'AZ Quotes',
+        'year': 'May 07,2017',
         'tag':'Gospel Singers',
+
     },
     {
         'quote':'I will walk by faith, even when I cannot see',
         'source':'Jeremy Camp',
         'citation': 'AZ Quotes',
+        'year':'November 03,2014',
         'tag':'Gospel Singers',
     },
     {
         'quote':'Give me open hands and open doors.',
         'source':'Matthew West',
         'citation':'AZ Quotes',
+        'year': '2012',
         'tag':'Gospel Singers',
     },
     {
         'quote':'In middle of my little mess,I forget how BIG i'm blessed!',
         'source':'Francesca Battistelli',
         'citation':'AZ Quotes',
+        'year':'2011',
         'tag':'Gospel Singers',
     },
     {
@@ -61,6 +66,7 @@ function printQuote(){
     getQuote +='<p class="quote">' + callGetRandomQuote.quote + "</p";
     getQuote +='<p class="source"' + callGetRandomQuote.source;
     getQuote +='<p class="citation"' + callGetRandomQuote.citation + "</span>";
+    getQuote +='<p class="year"' + callGetRandomQuote.year + "</span>";
     getQuote += <p class="tag"' + callGetRandomQuote.tag + "</span>";
     document.getElementById('quote-box').innerHTML = getQuote;
 }
