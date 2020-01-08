@@ -67,7 +67,7 @@ function printQuote(){
     getQuote +='<p class="source"' + callGetRandomQuote.source;
     getQuote +='<p class="citation"' + callGetRandomQuote.citation + "</span>";
     getQuote +='<p class="year"' + callGetRandomQuote.year + "</span>";
-    getQuote += <p class="tag"' + callGetRandomQuote.tag + "</span>";
+ 
     document.getElementById('quote-box').innerHTML = getQuote;
 }
 
