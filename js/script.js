@@ -63,7 +63,7 @@ function getRandomQuote(){
 //This will connect the quote to the html sting
 function printQuote(){
     var callGetRandomQuote = getRandomQuote();
-    getQuote +='<p class="quote">' + callGetRandomQuote.quote + "</p";
+    getQuote +='<p class="quote"' + callGetRandomQuote.quote + "</p";
     getQuote +='<p class="source"' + callGetRandomQuote.source;
     getQuote +='<p class="citation"' + callGetRandomQuote.citation + "</span>";
     getQuote +='<p class="year"' + callGetRandomQuote.year + "</span>";
