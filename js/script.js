@@ -63,10 +63,10 @@ function getRandomQuote(){
 //This will connect the quote to the html sting
 function printQuote(){
     var callGetRandomQuote = getRandomQuote();
-    getQuote +='<p class="quote"' + callGetRandomQuote.quote + "</p";
-    getQuote +='<p class="source"' + callGetRandomQuote.source;
-    getQuote +='<p class="citation"' + callGetRandomQuote.citation + "</span>";
-    getQuote +='<p class="year"' + callGetRandomQuote.year + "</span>";
+    var getQuote +='<p class="quote"' + callGetRandomQuote.quote + "</p";
+    var getQuote +='<p class="source"' + callGetRandomQuote.source;
+    var getQuote +='<p class="citation"' + callGetRandomQuote.citation + "</span>";
+    var getQuote +='<p class="year"' + callGetRandomQuote.year + "</span>";
  
     document.getElementById('quote-box').innerHTML = getQuote;
 }
