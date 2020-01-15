@@ -67,9 +67,7 @@ function printQuote(){
     var getQuote +='<p class="source">'; + callGetRandomQuote.source + "</span>";
     var getQuote +='<p class="citation">'; + callGetRandomQuote.citation + "</span>";
     var getQuote +='<p class="year">'; + callGetRandomQuote.year + "</span>";
-}
- 
-    document.getElementById('quote-box').innerHTML = getQuote;
+document.getElementById('quote-box').innerHTML = getQuote;
 }
 
 /***
