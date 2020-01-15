@@ -64,7 +64,7 @@ function getRandomQuote(){
 function printQuote(){
     var callGetRandomQuote = getRandomQuote();
     var getQuote +='<p class="quote">'; + callGetRandomQuote.quote + "</span>";
-    var getQuote +='<p class="source">'; + callGetRandomQuote.source;"</span>";
+    var getQuote +='<p class="source">'; + callGetRandomQuote.source + "</span>";
     var getQuote +='<p class="citation">'; + callGetRandomQuote.citation + "</span>";
     var getQuote +='<p class="year">'; + callGetRandomQuote.year + "</span>";
 }
