@@ -4,7 +4,7 @@ project 1 - A Random Quote Generator
 ******************************************/
 
 
-var quotes = [
+var quotes = '';
     {
         'quote':'We have pain,but not as great as his name.',
         'source':'Jamie Grace',
@@ -40,7 +40,7 @@ var quotes = [
         'tag':'Gospel Singers',
     },
     {
-        'quote':'In middle of my little mess,I forget how BIG im blessed!',
+        'quote':'In middle of my little mess,I forget how BIG i'm blessed!',
         'source':'Francesca Battistelli',
         'citation':'AZ Quotes',
         'year':'2011',
@@ -63,11 +63,15 @@ function getRandomQuote(){
 //This will connect the quote to the html sting
 function printQuote(){
     var callGetRandomQuote = getRandomQuote();
-    var getQuote +='<p class="quote">'; + callGetRandomQuote.quote + "</span>";
-    var getQuote +='<p class="source">'; + callGetRandomQuote.source + "</span>";
-    var getQuote +='<p class="citation">'; + callGetRandomQuote.citation + "</span>";
-    var getQuote +='<p class="year">'; + callGetRandomQuote.year + "</span>";
-document.getElementById('quote-box').innerHTML = getQuote;
+    getQuote +='<p class="quote">' + callGetRandomQuote.quote + "</p";
+    getQuote +='<p class="source">' + callGetRandomQuote.source;
+    if (callGetRandomQuote.citation) {
+        getQuote +='<span class="citation">' + callGetRandomQuote.citation + "</span>";
+    }
+    if (callGetRandomQuote.year) {
+        getQuote +='<span class="year">' + callGetRandomQuote.year + "</span>;
+    }
+    document.getElementById('quote-box').innerHTML = getQuote;
 }
 
 /***
