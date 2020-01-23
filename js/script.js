@@ -137,6 +137,10 @@ function changeBackgroundColor(){
   var green = randomNumberRGB();
   var blue = randomNumberRGB();
 
+    /**
+   * grab my body element, source : https://developer.mozilla.org/en-US/docs/Web/API/Document/body
+   * set background color, source : https://www.w3schools.com/jsref/prop_style_backgroundcolor.asp
+   */    
   document.body.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
 }
 
