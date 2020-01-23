@@ -62,12 +62,11 @@ function stopPrintQuoteInterval(){
     myTimer = clearInterval(myTimer);
 }
 
-
 /***
  * `getRandomQuote` function
 ***/
 /**
- * Function that will return a random number between 1 and the length of my quotes array
+ *  A function that will return a random number between 1 and the length of my quotes array
  */
 function getRandomQuote(){
   var index = Math.floor(Math.random() * quotes.length );
@@ -75,10 +74,9 @@ function getRandomQuote(){
   return quotes[index];
 }
 
-
 /***
  * `printQuote` function
- * Main function that will print a quote into my web site
+ * The main function that will print a quote into my website
 ***/
 function printQuote(){
 
