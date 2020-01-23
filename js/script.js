@@ -40,7 +40,7 @@ var quotes = '';
         'tag':'Gospel Singers',
     },
     {
-        'quote':'In middle of my little mess,I forget how BIG i'm blessed!',
+        'quote':'In middle of my little mess,I forget how BIG im blessed!',
         'source':'Francesca Battistelli',
         'citation':'AZ Quotes',
         'year':'2011',
