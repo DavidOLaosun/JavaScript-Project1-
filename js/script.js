@@ -5,6 +5,8 @@ project 1 - A Random Quote Generator
 
 
 var quotes = '';
+   
+
     {
         'quote':'We have pain,but not as great as his name.',
         'source':'Jamie Grace',
