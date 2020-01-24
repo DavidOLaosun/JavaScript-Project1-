@@ -54,7 +54,7 @@ var quotes = '';
     },
 ];
 function startPrintQuoteInterval(){
-  myTimer = setInterval(printQuote, 30000);
+  myTimer = setInterval(printQuote, 50000);
 }
 
 function stopPrintQuoteInterval(){
