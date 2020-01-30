@@ -4,7 +4,7 @@ project 1 - A Random Quote Generator
 ******************************************/
 
 
-var quotes = '';
+const quotes = '';
    
 
     {
@@ -55,14 +55,6 @@ var quotes = '';
         'tag':'Gospel Singers',
     },
 ];
-function startPrintQuoteInterval(){
-  myTimer = setInterval(printQuote, 50000);
-}
-
-function stopPrintQuoteInterval(){
-  if(myTimer)
-    myTimer = clearInterval(myTimer);
-}
 
 /***
  * `getRandomQuote` function
@@ -71,7 +63,7 @@ function stopPrintQuoteInterval(){
  *  A function that will return a random number between 1 and the length of my quotes array
  */
 function getRandomQuote(){
-  var index = Math.floor(Math.random() * quotes.length );
+ const index = Math.floor(Math.random() * quotes.length );
   console.log(index);
   return quotes[index];
 }
@@ -81,16 +73,12 @@ function getRandomQuote(){
  * The main function that will print a quote into my website
 ***/
 function printQuote(){
-
-  //set intervals
-  stopPrintQuoteInterval();
-  startPrintQuoteInterval();
-  
+   
   // grab a randomQuote from quotes
-  var randomQuote = getRandomQuote();
+  const randomQuote = getRandomQuote();
 
   //build my quote inner HTML
-  var quoteHTML = '';
+  const quoteHTML = '';
   quoteHTML += '<p class="quote"> ' + randomQuote["quote"] + ' </p>';
   quoteHTML += '<p class="source"> ' + randomQuote["source"];
   
@@ -133,9 +121,9 @@ function randomNumberRGB(){
  */
 function changeBackgroundColor(){
   //set my rgb values
-  var red = randomNumberRGB();
-  var green = randomNumberRGB();
-  var blue = randomNumberRGB();
+  const red = randomNumberRGB();
+  const green = randomNumberRGB();
+  const blue = randomNumberRGB();
 
     /**
    * grab my body element, source : https://developer.mozilla.org/en-US/docs/Web/API/Document/body
