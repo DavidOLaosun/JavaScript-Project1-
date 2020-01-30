@@ -92,7 +92,7 @@ function printQuote(){
   //if quote has tags
   if(randomQuote["tags"]){
     quoteHTML += '<p class="tags"><i>';
-    for(var i = 0; i < randomQuote["tags"].length; i++){
+    for(const i = 0; i < randomQuote["tags"].length; i++){
       if(i === 0)
         quoteHTML += randomQuote["tags"][i];
       else 
