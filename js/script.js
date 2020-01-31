@@ -4,7 +4,7 @@ project 1 - A Random Quote Generator
 ******************************************/
 
 
-const quotes = '';
+var quotes = [
    
 
     {
@@ -56,88 +56,37 @@ const quotes = '';
     },
 ];
 
-/***
- * `getRandomQuote` function
-***/
-/**
- *  A function that will return a random number between 1 and the length of my quotes array
- */
-function getRandomQuote(){
- const index = Math.floor(Math.random() * quotes.length );
-  console.log(index);
-  return quotes[index];
-}
-
-/***
- * `printQuote` function
- * The main function that will print a quote into my website
-***/
-function printQuote(){
+// A function that can generate a random number and will return a quote based off the random number 
+function printQuote () {
+//Generates a random number between 1 and the number of quotes that we have chosen 
    
-  // grab a randomQuote from quotes
-  const randomQuote = getRandomQuote();
+   var randomNumber = Math.floor(Math.random()* quotes.length)
+   //select which quote to pull from
+   
+   return quotes[randomNumber]
+}
 
-  //build my quote inner HTML
-  const quoteHTML = '';
-  quoteHTML += '<p class="quote"> ' + randomQuote["quote"] + ' </p>';
-  quoteHTML += '<p class="source"> ' + randomQuote["source"];
-  
-  //if quote has citation or year 
-  if(randomQuote["citation"])
-    quoteHTML += '<span class="citation"> ' + randomQuote["citation"] + ' </span>';
-  if(randomQuote["year"])
-    quoteHTML += '<span class="year"> ' + randomQuote["year"] + ' </span>';
-  quoteHTML += '</p>';
-
-  //if quote has tags
-  if(randomQuote["tags"]){
-    quoteHTML += '<p class="tags"><i>';
-    for(const i = 0; i < randomQuote["tags"].length; i++){
-      if(i === 0)
-        quoteHTML += randomQuote["tags"][i];
-      else 
-        quoteHTML += ', ' + randomQuote["tags"][i];
-    }
-    quoteHTML += '</i></p>';
+//Print quote function
+//Make sure to print out the string on the screen
+function printQuote(){
+   var getRand = getRandomQuote()
+   var emptyString =
+       '<p class="quote">' + getRand.quote + '</p'
+       '<p class ="source">' + getRand.source
+   
+  if(getRand.citation.length !==0){
+     emptryString += '<span class = "citation">' + getRand.citation + '</span>'
   }
-  
-
-  //set quoteHTML right into the div element
-  document.getElementById("quote-box").innerHTML = quoteHTML;
-
-  //change background color
-  changeBackgroundColor();
+  if (getRand.year.length !==0){
+     emptryString += '<span class = "year">' + getRand.year + '</span>
+  }
+ emptyString += '</p>'    
+   document.getElementByLd('quote-box').innerHTML = emptryString
 }
-
-/**
- * returns a random number between 0 and 255 
- */
-function randomNumberRGB(){
-  return Math.floor(Math.random()*256);
-}
-
-/**
- * Function that will change backgroun color for each call
- */
-function changeBackgroundColor(){
-  //set my rgb values
-  const red = randomNumberRGB();
-  const green = randomNumberRGB();
-  const blue = randomNumberRGB();
-
-    /**
-   * grab my body element, source : https://developer.mozilla.org/en-US/docs/Web/API/Document/body
-   * set background color, source : https://www.w3schools.com/jsref/prop_style_backgroundcolor.asp
-   */    
-  document.body.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
-}
-
-
-
-
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
-document.getElementById('load-quote').addEventListener("click", printQuote, false);
+document.getElementById('load-quote')
+   .addEventListener("click", printQuote, false);
