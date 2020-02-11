@@ -56,18 +56,15 @@ var quotes = [
     },
 ];
 
-// A function that can generate a random number and will return a quote based off the random number 
 function printQuote () {
-//Generates a random number between 1 and the number of quotes that we have chosen 
+
    
    var randomNumber = Math.floor(Math.random()* quotes.length)
-   //select which quote to pull from
+  
    
    return quotes[randomNumber]
 }
 
-//Print quote function
-//Make sure to print out the string on the screen
 function printQuote(){
    var getRand = getRandomQuote()
    var emptyString =
