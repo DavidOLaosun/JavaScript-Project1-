@@ -35,7 +35,7 @@ h1 {
     background-color: rgba(0,0,0,0.1);
     border-radius: 5px;
     border: 2px solid rgba(0,0,0,0.2);
-    transitiion: 0.5s;
+    transition: 0.5s;
 }
 
 .load-quote:hover{
@@ -62,7 +62,7 @@ h1 {
 }
 
 .quote-box {
-    text-shadow: 1px 1px 1px rgba(50,50,50,0.4)
+    text-shadow: 1px 1px 1px rgba(50,50,50,0.4);
     line-height: 0.5;
 }
 
@@ -70,7 +70,7 @@ h1 {
     font-size: 2rem;
     font-weight: 400;
     line-height: 2.2;
-    postion: relative;
+    position: relative;
     margin: 0;
     margin-left: 10px; 
 }
@@ -79,7 +79,7 @@ h1 {
 .quote:after {
     font-size: 4rem;
     line-height: 3.0rem;
-    postion: absolute;
+    position: absolute;
 }
 
 .quote:before {
@@ -90,7 +90,7 @@ h1 {
 .quote:after {
     bottom: -0.1em;
     margin-left:0.1em;
-    postion:absolute;
+    position:absolute;
 }
 
 .source {
@@ -105,7 +105,7 @@ h1 {
     content: ",";
 }
 
-.citation: {
+.citation {
     font-style: italic;
 }
 
