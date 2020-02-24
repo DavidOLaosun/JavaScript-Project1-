@@ -56,7 +56,7 @@ var quotes = [
     },
 ];
 
-function printQuote () {
+ getRandomQuote()
 
    
    var randomNumber = Math.floor(Math.random()* quotes.length)
@@ -68,17 +68,17 @@ function printQuote () {
 function printQuote(){
    var getRand = getRandomQuote()
    var emptyString =
-       '<p class="quote">' + getRand.quote + '</p'
-       '<p class ="source">' + getRand.source
+       '<p class="quote">' + getRand.quote + '</p>'
+      emptyString+= '<p class ="source">' + getRand.source
    
-  if(getRand.citation.length !==0){
-     emptryString += '<span class = "citation">' + getRand.citation + '</span>'
+  if(getRand.citation){
+     emptyString += '<span class = "citation">' + getRand.citation + '</span>'
   }
-  if (getRand.year.length !==0){
-     emptryString += '<span class = "year">' + getRand.year + '</span>
+  if (getRand.year){
+     emptyString += '<span class = "year">' + getRand.year + '</span>'
   }
  emptyString += '</p>'    
-   document.getElementByLd('quote-box').innerHTML = emptryString
+   document.getElementById('quote-box').innerHTML = emptyString
 }
 /***
  * click event listener for the print quote button
