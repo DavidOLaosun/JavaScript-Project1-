@@ -56,7 +56,7 @@ var quotes = [
     },
 ];
 
- getRandomQuote()
+  var getRandomQuote()
 
    
    var randomNumber = Math.floor(Math.random()* quotes.length)
