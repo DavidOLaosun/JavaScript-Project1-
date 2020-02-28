@@ -62,8 +62,7 @@ var quotes = [
    var randomNumber = Math.floor(Math.random()* quotes.length)
   
    
-   return quotes[randomNumber]
-}
+   
 
 function printQuote(){
    var getRand = getRandomQuote()
