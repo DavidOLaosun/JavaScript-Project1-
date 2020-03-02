@@ -56,29 +56,50 @@ var quotes = [
     },
 ];
 
-  var getRandomQuote()
+//This function grabs a random quote from the Quotes array. 
 
-   
-   var randomNumber = Math.floor(Math.random()* quotes.length)
-  
-   
-   
+  function getRandomQuote(){
+    var randomNumber = Math.floor(Math.random()* quotes.length);
+     return quotes[randomNumber];
+    },
+ 
+//This function will change the background color at random when the function is called. 
+function random_bg_color(){
+   red = Math.floor(Math.random() * 256);
+   green = Math.floor(Math.random() * 256);
+   blue = Math.floor(Math.random() * 256);
+   rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+   document.body.style.background = rgbColor;
+},   
+       
+  /*This function will create the HTML for the quotes to get prinited to the webpage. 
+  It will check to see if the Citatiion & Year properties are present. When they are it adds them to the HTML to be printed. */
 
-function printQuote(){
-   var getRand = getRandomQuote()
-   var emptyString =
-       '<p class="quote">' + getRand.quote + '</p>'
-      emptyString+= '<p class ="source">' + getRand.source
-   
-  if(getRand.citation){
-     emptyString += '<span class = "citation">' + getRand.citation + '</span>'
-  }
-  if (getRand.year){
-     emptyString += '<span class = "year">' + getRand.year + '</span>'
-  }
- emptyString += '</p>'    
-   document.getElementById('quote-box').innerHTML = emptyString
-}
+   function printQuote(){
+	randomQuote = getRandomQuote(quotes);
+	htmlToPage = '<p class="quote">' + randomQuote.quote +'</p>';
+	htmlToPage +='<p class="source">' + randomQuote.source;
+	if(randomQuote.citation){
+		htmlToPage += '<span class="citation">' + randomQuote.citation + '</span>';
+	}
+	if(randomQuote.year){ 
+		htmlToPage += '<span class="year">' + randomQuote.year + '</span>';
+	}
+	if(randomQuote.catagory){
+		htmlToPage += '<span class="category">' +  " " + randomQuote.catagory + '</p>';
+	}
+	htmlToPage += '</p>';
+	random_bg_color();
+	document.getElementById('quote-box').innerHTML = htmlToPage; 
+}   
+
+
+//This method setd an automatic timer to refresh the page every 10secs.
+
+setInterval(function(){ printQuote(); }, 40000)
+
+//Will change the quote at random when "Show another Quote" button is pressed.
+
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
