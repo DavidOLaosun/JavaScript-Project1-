@@ -4,7 +4,7 @@ project 1 - A Random Quote Generator
 ******************************************/
 
 
-var quotes = [
+const quotes = [
    
 
     {
