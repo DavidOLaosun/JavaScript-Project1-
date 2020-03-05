@@ -61,7 +61,7 @@ const quotes = [
   function getRandomQuote(){
     var randomNumber = Math.floor(Math.random()* quotes.length);
      return quotes[randomNumber];
-    
+  } 
  
 //This function will change the background color at random when the function is called. 
 function random_bg_color(){
@@ -70,7 +70,7 @@ function random_bg_color(){
    blue = Math.floor(Math.random() * 256);
    rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
    document.body.style.background = rgbColor;
-
+}
        
   /*This function will create the HTML for the quotes to get prinited to the webpage. 
   It will check to see if the Citatiion & Year properties are present. When they are it adds them to the HTML to be printed. */
