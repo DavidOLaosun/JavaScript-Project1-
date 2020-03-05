@@ -20,7 +20,7 @@ const quotes = [
         'tag':'Gospel Singers'
     },
     {
-        'quote':'You lead me and keep me from falling.You carry ,e close to Your heart.And surely Your goodness and mercy will follow me.',
+        'quote':'You lead me and keep me from falling.You carry ,me close to Your heart.And surely Your goodness and mercy will follow me.',
         'source':'Chris Tomlin',
         'citation':'AZ Quotes',
         'year': 'May 07,2017',
@@ -96,7 +96,7 @@ function random_bg_color(){
 
 //This method setd an automatic timer to refresh the page every 10secs.
 
-setInterval( printQuote 10000),
+setInterval(function(){ alert(printQuote); }, 10000);
 
 //Will change the quote at random when "Show another Quote" button is pressed.
 
