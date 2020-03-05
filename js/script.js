@@ -96,7 +96,7 @@ function random_bg_color(){
 
 //This method setd an automatic timer to refresh the page every 10secs.
 
-setInterval(function(){ alert(printQuote); }, 10000);
+setInterval(printQuote), 10000);
 
 //Will change the quote at random when "Show another Quote" button is pressed.
 
